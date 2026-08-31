@@ -1,0 +1,152 @@
+.puzzdaily-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 100%;
+}
+
+.puzzdaily-logo--compact {
+  gap: 0.6rem;
+}
+
+.puzzdaily-logo__mark {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.18rem;
+  height: 3.5rem;
+  min-width: 5.4rem;
+  padding: 0 0.25rem 0.15rem;
+}
+
+.puzzdaily-logo--compact .puzzdaily-logo__mark {
+  height: 2.85rem;
+  min-width: 4.5rem;
+}
+
+.puzzdaily-logo__bar {
+  position: relative;
+  display: block;
+  width: 1.1rem;
+  border-radius: 0.65rem 0.65rem 0.2rem 0.2rem;
+  background: linear-gradient(180deg, var(--color-purple) 0%, var(--color-deep-purple) 55%, var(--color-indigo) 100%);
+  box-shadow:
+    inset 0 1px 0 rgb(var(--color-white-rgb) / 0.28),
+    0 10px 24px rgb(var(--color-deep-purple-rgb) / 0.28);
+  transform: skewX(-14deg);
+}
+
+.puzzdaily-logo__bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgb(var(--color-white-rgb) / 0.16), rgb(var(--color-white-rgb) / 0) 45%);
+}
+
+.puzzdaily-logo__bar--short {
+  height: 2rem;
+  margin-top: auto;
+}
+
+.puzzdaily-logo__bar--tall {
+  height: 3.4rem;
+}
+
+.puzzdaily-logo__bar--mid {
+  height: 2.95rem;
+}
+
+.puzzdaily-logo--compact .puzzdaily-logo__bar {
+  width: 0.9rem;
+}
+
+.puzzdaily-logo--compact .puzzdaily-logo__bar--short {
+  height: 1.65rem;
+}
+
+.puzzdaily-logo--compact .puzzdaily-logo__bar--tall {
+  height: 2.8rem;
+}
+
+.puzzdaily-logo--compact .puzzdaily-logo__bar--mid {
+  height: 2.4rem;
+}
+
+.puzzdaily-logo__orbit {
+  position: absolute;
+  left: -0.2rem;
+  top: 0.25rem;
+  width: 5.9rem;
+  height: 3rem;
+  overflow: visible;
+}
+
+.puzzdaily-logo--compact .puzzdaily-logo__orbit {
+  width: 4.9rem;
+  height: 2.5rem;
+}
+
+.puzzdaily-logo__wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 0.18rem;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.puzzdaily-logo__name {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(1.45rem, 4.4vw, 2.2rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 0.05em;
+  color: var(--color-black);
+}
+
+.puzzdaily-logo__tag {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(0.9rem, 2.8vw, 1.2rem);
+  font-weight: 700;
+  color: rgb(var(--color-dark-gray-rgb) / 0.72);
+}
+
+.puzzdaily-logo--compact .puzzdaily-logo__name {
+  font-size: clamp(1.15rem, 4vw, 1.5rem);
+}
+
+.puzzdaily-logo--compact .puzzdaily-logo__tag {
+  font-size: clamp(0.78rem, 2.4vw, 0.95rem);
+}
+
+@media (max-width: 420px) {
+  .puzzdaily-logo {
+    gap: 0.55rem;
+  }
+
+  .puzzdaily-logo__mark {
+    min-width: 4.2rem;
+    height: 2.8rem;
+  }
+
+  .puzzdaily-logo__bar {
+    width: 0.82rem;
+  }
+
+  .puzzdaily-logo__bar--short {
+    height: 1.55rem;
+  }
+
+  .puzzdaily-logo__bar--tall {
+    height: 2.7rem;
+  }
+
+  .puzzdaily-logo__bar--mid {
+    height: 2.3rem;
+  }
+
+  .puzzdaily-logo__orbit {
+    width: 4.45rem;
+    height: 2.25rem;
+  }
+}

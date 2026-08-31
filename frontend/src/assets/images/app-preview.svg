@@ -1,0 +1,12 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="40" fill="#F6F5F5"/>
+  <circle cx="197" cy="144" r="180" fill="#D9E2FF" fill-opacity="0.7"/>
+  <circle cx="995" cy="504" r="210" fill="#F8EDFF" fill-opacity="0.85"/>
+  <rect x="114" y="169" width="74" height="188" rx="24" transform="rotate(12 114 169)" fill="#7752FE"/>
+  <rect x="200" y="108" width="74" height="260" rx="24" transform="rotate(12 200 108)" fill="#414BEA"/>
+  <rect x="286" y="140" width="74" height="220" rx="24" transform="rotate(12 286 140)" fill="#7752FE"/>
+  <path d="M73 325C184 319 262 291 340 214C399 156 450 122 505 111" stroke="#F05537" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="505" cy="111" r="20" fill="#F05537"/>
+  <text x="420" y="275" fill="#222222" font-family="Arial, sans-serif" font-size="126" font-weight="700">PuzzDaily</text>
+  <text x="426" y="354" fill="#3D3B40" font-family="Arial, sans-serif" font-size="36">Daily puzzle sessions for focused thinkers</text>
+</svg>
