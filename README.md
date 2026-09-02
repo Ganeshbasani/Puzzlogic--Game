@@ -2,251 +2,264 @@
 
 > A polished, mobile-first daily puzzle platform designed for short, rewarding brain-training sessions.
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)](https://www.prisma.io/)
+<p align="center">
 
-**🚀 Live Application:**  
+  <a href="https://puzzlogic-game-ja4v.onrender.com/modes">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Application-Puzzlogic%20Game-4F46E5?style=for-the-badge" alt="Live Application">
+  </a>
+
+  <a href="https://github.com/Ganeshbasani/Puzzlogic--Game">
+    <img src="https://img.shields.io/badge/📦%20GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub Repository">
+  </a>
+
+</p>
+
+<p align="center">
+
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
+
+</p>
+
+---
+
+## 🚀 Live Application
+
+**Play Puzzlogic Game:**
+
 https://puzzlogic-game-ja4v.onrender.com/modes
 
-**📦 GitHub Repository:**  
+**GitHub Repository:**
+
 https://github.com/Ganeshbasani/Puzzlogic--Game
 
 ---
 
-## 📸 Application Showcase
+## 📖 Overview
 
-Puzzlogic is designed as a responsive, mobile-first puzzle experience with a clean interface, focused interactions, progress tracking, and multiple puzzle categories.
+**Puzzlogic Game** is a mobile-first daily puzzle platform built to provide quick, engaging and repeatable brain-training sessions.
 
-### 🏠 Dashboard • 🎮 Game Modes • 🧩 Number Grid
+The application combines multiple puzzle categories, dedicated game modes, interactive tutorials, streak tracking, statistics, sound effects and persistent gameplay state into a single polished experience.
 
-| Dashboard | Game Modes | Number Grid |
-|:---:|:---:|:---:|
-| <img src="./docs/screenshots/home-dashboard.png" width="280" alt="Puzzlogic Home Dashboard" /> | <img src="./docs/screenshots/game-modes.png" width="280" alt="Puzzlogic Game Modes" /> | <img src="./docs/screenshots/gameplay-grid.png" width="280" alt="Number Grid Gameplay" /> |
+The project is structured as a modern full-stack monorepo with a production-ready frontend and backend architecture designed to support future cloud synchronization, authentication, leaderboards and persistent server-side game data.
 
-### 🎯 Pinpoint • 📖 How to Play • 📊 Statistics
-
-| Pinpoint | How to Play | Statistics |
-|:---:|:---:|:---:|
-| <img src="./docs/screenshots/gameplay-pinpoint.png" width="280" alt="Pinpoint Puzzle Gameplay" /> | <img src="./docs/screenshots/how-to-play.png" width="280" alt="How to Play Tutorial" /> | <img src="./docs/screenshots/statistics.png" width="280" alt="Puzzlogic Statistics" /> |
+The current deployed application focuses on the core gameplay experience and local-first persistence.
 
 ---
 
-# 📌 Overview
+## ✨ Features
 
-**Puzzlogic Game** is a full-stack-ready, mobile-first daily logic puzzle platform built around the idea of making brain training simple, engaging, and repeatable.
+### 🧠 Multiple Puzzle Types
 
-The application combines several puzzle categories into a single experience and provides multiple ways to play, including daily puzzles, practice sessions, timed challenges, and historical puzzle replay.
+Puzzlogic provides different puzzle styles that challenge different types of reasoning:
 
-The frontend is implemented using **React + TypeScript + Vite**, with a modular feature-based architecture designed to keep game logic, UI components, state management, and services separated.
-
-The repository also contains a structured **Node.js + TypeScript + Prisma backend** that provides the foundation for authentication, game sessions, leaderboard functionality, and persistent server-side data.
-
----
-
-# ✨ Key Features
-
-## 🧠 Multiple Puzzle Categories
-
-Puzzlogic provides several puzzle styles designed to test different types of reasoning.
-
-### 👑 Queens
-
-A spatial and logical deduction puzzle where players must place queens while respecting the game's constraints.
-
-### 🎯 Pinpoint
-
-A word-association and deduction puzzle where players progressively identify the relationship between clues.
-
-### 🧩 Number Grid
-
-A quantitative logic puzzle based on identifying and completing number patterns.
-
-### 💡 Logic Riddle
-
-A lateral-thinking puzzle focused on interpreting clues and reaching the correct logical conclusion.
-
-Each puzzle type has its own dedicated renderer and gameplay logic.
+- 👑 **Queens** — Spatial and logical placement puzzles
+- 🎯 **Pinpoint** — Word association and deduction puzzles
+- 🧩 **Logic Riddle** — Lateral thinking and logical reasoning
+- 🔢 **Number Grid** — Numerical and pattern-based logic puzzles
 
 ---
 
-# 🎮 Game Modes
+### 🎮 Multiple Game Modes
 
-## 📅 Daily
+#### 📅 Daily Mode
 
-The primary Puzzlogic experience.
-
-Players receive a daily puzzle session designed to encourage consistent engagement.
-
-Features include:
-
-- Daily puzzle generation
-- Session progression
-- Completion tracking
+- 15 puzzles per daily session
+- Designed around a daily habit loop
 - Streak tracking
-- Score calculation
-- Daily countdown
-- Persistent completion state
+- Difficulty-based challenges
+- Daily progress tracking
+- Countdown/reset behavior
+
+#### 🏋️ Practice Mode
+
+- Practice individual puzzle categories
+- Multiple difficulty levels
+- Designed for unlimited practice
+- Improve specific puzzle-solving skills
+
+#### ⏱️ Challenge Mode
+
+- Timed puzzle sessions
+- Score-oriented gameplay
+- Designed for competitive personal performance
+- Encourages faster and more accurate solving
+
+#### 📚 Archive Mode
+
+- Browse historical puzzles
+- Replay previous puzzle sessions
+- Explore the puzzle catalogue
 
 ---
 
-## 🏋️ Practice
+## 📊 Progress & Statistics
 
-Practice mode allows players to replay puzzles without the restrictions of the daily cycle.
+The application tracks gameplay progress and provides users with performance information such as:
 
-Players can select:
-
-- Puzzle category
-- Difficulty
-- Practice configuration
-
-This mode is designed for learning and improving puzzle-solving ability.
-
----
-
-## ⚡ Challenge
-
-Challenge mode focuses on faster puzzle solving and score-oriented gameplay.
-
-The mode introduces time-based pressure and scoring mechanics designed to encourage players to improve both:
-
+- Solved puzzles
 - Accuracy
-- Completion speed
-
----
-
-## 🗂️ Archive
-
-Archive mode allows players to revisit previous puzzle sessions.
-
-This provides access to historical puzzles instead of limiting the application to the current daily session.
-
----
-
-# 📊 Progress & Statistics
-
-Puzzlogic tracks player performance locally and presents it through a dedicated statistics experience.
-
-Tracked information includes:
-
-- Games completed
-- Accuracy
+- Win rate
 - Current streak
-- Best streak
-- Performance trends
-- Puzzle activity
-- Scores
-- Completion history
-
-The statistics interface provides players with feedback about their improvement over time.
-
----
-
-# 🔥 Streak System
-
-The daily experience is designed around consistent participation.
-
-The application tracks daily completion and maintains player streak information.
-
-The streak system includes:
-
-- Current streak
-- Best streak
-- Daily completion state
-- Automatic daily transitions
-- Countdown until the next daily session
-
-This creates a simple habit loop without requiring constant server communication.
-
----
-
-# ⏱️ Daily Countdown
-
-The application provides a countdown mechanism for the daily puzzle cycle.
-
-Once the current daily session reaches its end, the application transitions toward the next daily puzzle state.
-
-This functionality is handled through the application's session and countdown components.
-
----
-
-# 🔊 Audio Experience
-
-Puzzlogic uses the **Web Audio API** to generate interface and gameplay sound effects programmatically.
-
-Instead of relying on large collections of static audio files, sound effects are generated dynamically.
-
-This approach helps:
-
-- Reduce asset size
-- Keep the application lightweight
-- Provide immediate feedback
-- Avoid unnecessary audio downloads
-
-Sound effects are encapsulated inside the application's sound service.
-
----
-
-# 💾 Offline-First Client Persistence
-
-The frontend uses browser-based persistence to retain important gameplay information.
-
-Persisted state includes areas such as:
-
+- Weekly activity
 - Daily progress
+- Mode-specific performance
+- Puzzle completion history
+
+The statistics experience is designed to make improvement visible over time.
+
+---
+
+## 🔥 Streak System
+
+The Daily experience includes a streak-based progression system.
+
+Users can:
+
+- Build consecutive daily streaks
+- Track their current streak
+- Maintain progress through the daily puzzle cycle
+- Use the built-in **Streak Freeze** functionality when available
+
+The streak system encourages consistent daily engagement without requiring long gaming sessions.
+
+---
+
+## 💡 Interactive Tutorials
+
+Each puzzle type can provide an integrated **How to Play** tutorial.
+
+Tutorials explain:
+
+- The objective of the puzzle
+- How to interact with the puzzle
+- How answers are entered
+- Important gameplay rules
+- Useful hints and interactions
+
+Tutorial progress can also be reset from Settings.
+
+---
+
+## 🔊 Sound Effects
+
+Puzzlogic includes programmatic sound effects using the browser's **Web Audio API**.
+
+This provides:
+
+- Button interaction feedback
+- Gameplay feedback
+- Success/win sounds
+- Lightweight audio without requiring a large collection of audio files
+
+Sound effects can be enabled or disabled from Settings.
+
+---
+
+## 💾 Local-First Persistence
+
+The current client application uses browser-based persistence for important gameplay state.
+
+Persisted information includes:
+
+- Game progress
 - Statistics
-- Game settings
-- Active gameplay state
 - Streak information
+- Gameplay state
 - User preferences
+- Sound settings
+- Tutorial state
 
-This allows the core gameplay experience to remain functional without requiring every interaction to communicate with a backend server.
-
----
-
-# 📱 Responsive & Mobile-First UI
-
-The application is designed primarily around a mobile puzzle experience while remaining responsive on larger screens.
-
-The UI includes:
-
-- Responsive layouts
-- Mobile navigation
-- Touch-friendly controls
-- Adaptive puzzle rendering
-- Responsive cards
-- Progress indicators
-- Accessible interactive elements
-
-The application also includes dedicated responsive utilities and mobile detection hooks.
+This allows the application to remain usable without requiring an account for the core gameplay experience.
 
 ---
 
-# 🎨 UI Architecture
+# 📸 Application Showcase
 
-The frontend uses reusable UI primitives and domain-specific components.
+## 🏠 Home Dashboard
 
-The interface includes reusable components for:
+<img src="./docs/screenshots/home-dashboard.png" width="300" alt="Puzzlogic Game Home Dashboard">
 
-- Cards
-- Buttons
-- Dialogs
-- Forms
-- Inputs
-- Navigation
-- Progress indicators
-- Badges
-- Toasts
-- Tooltips
-- Drawers
-- Tables
-- Tabs
-- Menus
+The dashboard provides quick access to the daily puzzle, current streak, solved count, win rate and available game modes.
 
-The project also contains a reusable component library under:
+---
+
+## 🎮 Game Modes
+
+<img src="./docs/screenshots/game-modes.png" width="300" alt="Puzzlogic Game Modes">
+
+The Game Modes screen provides access to Daily, Practice, Challenge and Archive gameplay.
+
+---
+
+## 🔢 Number Grid Gameplay
+
+<img src="./docs/screenshots/gameplay-grid.png" width="300" alt="Number Grid Gameplay">
+
+Number Grid challenges users to complete missing values while following the puzzle's logical constraints.
+
+---
+
+## 🎯 Pinpoint Gameplay
+
+<img src="./docs/screenshots/gameplay-pinpoint.png" width="300" alt="Pinpoint Gameplay">
+
+Pinpoint presents progressive clues and requires players to identify the connection between them.
+
+---
+
+## ⚙️ Settings
+
+<img src="./docs/screenshots/settings.png" width="300" alt="Puzzlogic Game Settings">
+
+The Settings screen provides controls for sound effects, streak freeze, tutorial reset and progress management.
+
+---
+
+## 📊 Statistics
+
+<img src="./docs/screenshots/statistics.png" width="300" alt="Puzzlogic Game Statistics">
+
+The Statistics screen allows users to review their puzzle performance and daily progress.
+
+---
+
+# 🏗️ Architecture
+
+The project follows a modular full-stack monorepo structure.
 
 ```text
-frontend/src/components/ui/
+                         ┌─────────────────────────┐
+                         │     Puzzlogic Client     │
+                         │      React + Vite        │
+                         └────────────┬────────────┘
+                                      │
+              ┌───────────────────────┼───────────────────────┐
+              │                       │                       │
+              ▼                       ▼                       ▼
+       ┌──────────────┐       ┌──────────────┐       ┌──────────────┐
+       │ Puzzle Engine│       │ Sound Service│       │ Progress Store│
+       │              │       │ Web Audio API│       │ localStorage  │
+       └──────┬───────┘       └──────────────┘       └──────┬───────┘
+              │                                              │
+              └──────────────────┬───────────────────────────┘
+                                 ▼
+                       ┌────────────────────┐
+                       │   React UI Layer   │
+                       │ Tailwind + Motion  │
+                       └────────────────────┘
+                                 │
+                                 ▼
+                       ┌────────────────────┐
+                       │   Backend Layer    │
+                       │ Node.js + Prisma   │
+                       └────────────────────┘
+                                 │
+                                 ▼
+                       ┌────────────────────┐
+                       │      Database      │
+                       └────────────────────┘
