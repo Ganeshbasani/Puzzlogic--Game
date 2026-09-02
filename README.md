@@ -91,7 +91,7 @@ The production client inside `frontend/` (branded as **PuzzDaily**) delivers dyn
 
 ## 🏗️ System Architecture
 
-
+```text
                          ┌─────────────────────────┐
                          │     Puzzlogic Client    │
                          │      React + Vite       │
@@ -130,11 +130,13 @@ The production client inside `frontend/` (branded as **PuzzDaily**) delivers dyn
                         ┌────────────────────┐
                         │      Database      │
                         └────────────────────┘
+```
 
+---
 
 ## 📂 Monorepo Project Structure
 
-
+```text
 puzzlogic-game/
 │
 ├── frontend/                         # Active PuzzDaily client application
@@ -583,4 +585,3 @@ If you find **Puzzlogic Game** useful or interesting:
 
 </p>
 ```
-
