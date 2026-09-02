@@ -117,3 +117,472 @@ The production client inside `frontend/` (branded as **PuzzDaily**) delivers dyn
                         │   Backend Layer    │
                         │ Node.js + Prisma   │
                         └────────────────────┘
+```markdown
+                                   │
+                                   ▼
+                        ┌────────────────────┐
+                        │   Backend Layer    │
+                        │ Node.js + Express  │
+                        │ Prisma + TypeScript│
+                        └──────────┬─────────┘
+                                   │
+                                   ▼
+                        ┌────────────────────┐
+                        │      Database      │
+                        └────────────────────┘
+```
+
+---
+
+## 📂 Monorepo Project Structure
+
+```text
+puzzlogic-game/
+│
+├── frontend/                         # Active PuzzDaily client application
+│   ├── src/
+│   │   ├── components/               # Reusable UI components
+│   │   ├── features/                  # Feature modules and game functionality
+│   │   ├── hooks/                     # Shared React hooks
+│   │   ├── services/                  # Audio, scoring, and application services
+│   │   └── utils/                     # Utility functions and helpers
+│   ├── test/                          # Vitest and Testing Library tests
+│   ├── public/                        # Static assets
+│   └── package.json
+│
+├── backend/                           # Node.js + Express + Prisma backend
+│   ├── prisma/                        # Prisma schema and database configuration
+│   ├── src/                           # Backend source code
+│   └── package.json
+│
+├── shared/                            # Shared types, rules, and reusable logic
+│
+├── assets/                            # Project media and global assets
+│
+├── docs/
+│   ├── screenshots/                   # Application screenshots
+│   ├── api-docs.md                    # API documentation
+│   ├── architecture.md                # Architecture documentation
+│   ├── deployment.md                  # Deployment documentation
+│   └── game-design.md                 # Puzzle and gameplay documentation
+│
+├── .env.example                       # Environment variable template
+├── .gitignore
+├── docker-compose.yml
+└── README.md
+```
+
+---
+
+## 🛠️ Technology Stack
+
+| Domain              | Technologies                               |
+| :------------------ | :----------------------------------------- |
+| **Frontend Core**   | React 18, TypeScript, Vite, TanStack Query |
+| **UI & Styling**    | Tailwind CSS                               |
+| **Animation**       | Framer Motion                              |
+| **Icons**           | Lucide Icons                               |
+| **Testing**         | Vitest, Testing Library                    |
+| **Backend**         | Node.js, Express, TypeScript               |
+| **Database**        | Prisma ORM                                 |
+| **Audio**           | Web Audio API                              |
+| **Device Feedback** | Navigator Vibration API                    |
+| **Persistence**     | Browser `localStorage`                     |
+| **Version Control** | Git, GitHub                                |
+| **Deployment**      | Render                                     |
+| **CI/CD**           | GitHub Actions                             |
+
+---
+
+## 🎯 Design Principles
+
+### 📱 Mobile-First
+
+The interface is designed around a mobile gameplay experience while maintaining responsive layouts for larger screens.
+
+### ⚡ Fast Sessions
+
+Gameplay is structured around short, focused sessions that are easy to start and finish.
+
+### 🧠 Meaningful Difficulty
+
+Each puzzle category introduces a different reasoning challenge, encouraging deduction, pattern recognition, spatial thinking, and lateral problem solving.
+
+### 🔄 Repeatable Gameplay
+
+Daily, Practice, Challenge, and Archive modes provide multiple ways to return to the application.
+
+### 💾 Reliable Progress
+
+Important gameplay state, statistics, preferences, and streak information are persisted locally for continued gameplay across browser sessions.
+
+### 🎨 Clean Interaction Design
+
+The interface emphasizes clear hierarchy, large touch targets, visual feedback, motion, and minimal interaction friction.
+
+---
+
+## 💻 Getting Started
+
+### Prerequisites
+
+* **Node.js:** `v18.0.0` or higher
+* **npm:** `v9.0.0` or higher
+* **Git**
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Ganeshbasani/Puzzlogic--Game.git
+cd Puzzlogic--Game
+```
+
+### 2. Navigate to the Frontend
+
+```bash
+cd frontend
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the Development Server
+
+```bash
+npm run dev
+```
+
+### 5. Open the Application
+
+Vite will display the local development URL in the terminal.
+
+Typically:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## ⚙️ Backend Setup
+
+Open a second terminal from the repository root:
+
+```bash
+cd backend
+npm install
+```
+
+Configure the required backend environment variables and database connection.
+
+Run the backend using the development script defined in:
+
+```text
+backend/package.json
+```
+
+The backend is structured to support future cloud-backed application functionality.
+
+---
+
+## 🔐 Environment Variables
+
+Create your local environment file from the provided template.
+
+### macOS / Linux
+
+```bash
+cp .env.example .env
+```
+
+### Windows PowerShell
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Configure the required variables according to the frontend, backend, and database configuration.
+
+> ⚠️ Never commit `.env` files containing API keys, credentials, database passwords, tokens, or other secrets.
+
+---
+
+## 🧪 Testing & Development Scripts
+
+Run frontend commands from the `frontend/` directory.
+
+```bash
+# Start development server
+npm run dev
+
+# Create production build
+npm run build
+
+# Run tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run linting / code-quality checks
+npm run lint
+```
+
+Before deployment, verify:
+
+* Frontend builds successfully
+* Tests pass successfully
+* Puzzle modes load correctly
+* Daily puzzles generate correctly
+* Statistics update correctly
+* Streak tracking works correctly
+* Local persistence works correctly
+* Sound settings work correctly
+* Tutorials work correctly
+* Responsive layouts work correctly
+
+---
+
+## 🚀 Deployment
+
+The production application is deployed using **Render**.
+
+### 🌐 Production Application
+
+https://puzzlogic-game-ja4v.onrender.com/modes
+
+### 📦 Source Repository
+
+https://github.com/Ganeshbasani/Puzzlogic--Game
+
+Deployment-specific documentation is available in:
+
+```text
+docs/deployment.md
+```
+
+---
+
+## 📚 Documentation
+
+| Document          | Description                              |
+| :---------------- | :--------------------------------------- |
+| `architecture.md` | System architecture and technical design |
+| `api-docs.md`     | Backend/API documentation                |
+| `deployment.md`   | Deployment and hosting instructions      |
+| `game-design.md`  | Puzzle rules and gameplay design         |
+| `screenshots/`    | Application screenshots                  |
+
+---
+
+## 🔌 Backend & API
+
+The repository includes a backend foundation based on:
+
+* Node.js
+* Express
+* TypeScript
+* Prisma ORM
+* Database integration
+* API-oriented architecture
+
+The backend is structured to support future server-side functionality such as:
+
+* 🔐 User authentication
+* 👤 User accounts and profiles
+* ☁️ Cloud-synchronized progress
+* 📊 Server-side statistics
+* 📚 Persistent game history
+* 🏆 Global leaderboards
+* 🔄 Cross-device synchronization
+
+> **Current status:** Core gameplay is primarily client-side and local-first. Full cloud synchronization and account-based features are planned for future phases.
+
+---
+
+## 🛣️ Roadmap
+
+* [x] **Phase 1:** Standalone frontend with deterministic puzzle engine and local persistence.
+* [ ] **Phase 2:** Live Express API integration for cloud synchronization.
+* [ ] **Phase 3:** User accounts, OAuth authentication, cloud progress, and global leaderboards.
+* [ ] **Phase 4:** Expanded multiplayer speed-run modes and additional puzzle categories.
+
+---
+
+## 🔮 Future Enhancements
+
+* 🔐 Authentication and account management
+* ☁️ Cloud save and cross-device synchronization
+* 🏆 Global leaderboards
+* 👥 Player profiles
+* 🌎 Multiplayer and competitive gameplay
+* 📈 Expanded analytics
+* 🗓️ Larger historical puzzle archive
+* 🔔 Daily reminders and notifications
+* 🎖️ Achievements and badges
+* 📱 Progressive Web App support
+* ♿ Expanded accessibility improvements
+* 🌍 Localization and additional language support
+
+---
+
+## 🤝 Contributing
+
+Contributions, bug fixes, ideas, and improvements are welcome.
+
+### 1. Fork the Repository
+
+Use the **Fork** button on GitHub.
+
+### 2. Clone Your Fork
+
+```bash
+git clone <your-fork-url>
+cd Puzzlogic--Game
+```
+
+### 3. Create a Feature Branch
+
+```bash
+git checkout -b feature/your-feature-name
+```
+
+### 4. Make Your Changes
+
+Implement and test your changes locally.
+
+### 5. Commit Your Changes
+
+```bash
+git add .
+git commit -m "feat: describe your change"
+```
+
+### 6. Push Your Branch
+
+```bash
+git push origin feature/your-feature-name
+```
+
+### 7. Open a Pull Request
+
+Create a Pull Request and describe:
+
+* What changed
+* Why the change was needed
+* How it was tested
+* Any relevant screenshots or notes
+
+---
+
+## 🐛 Bug Reports & Feature Requests
+
+Found a problem or have an idea?
+
+Open an issue in the GitHub repository:
+
+https://github.com/Ganeshbasani/Puzzlogic--Game
+
+Please include:
+
+* Clear issue description
+* Steps to reproduce
+* Expected behavior
+* Actual behavior
+* Browser/device information
+* Screenshot or recording when helpful
+
+---
+
+## 🔒 Security
+
+Please never publish sensitive information such as:
+
+* API keys
+* Database credentials
+* Authentication tokens
+* Production environment variables
+* Private access credentials
+
+For security-sensitive issues, contact the project author directly instead of publishing confidential information in a public issue.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+See the [`LICENSE`](./LICENSE) file for the complete license text.
+
+---
+
+## 👨‍💻 Author
+
+### Ganesh Basani
+
+**GitHub:**
+https://github.com/Ganeshbasani
+
+**Project Repository:**
+https://github.com/Ganeshbasani/Puzzlogic--Game
+
+---
+
+## 🙏 Acknowledgements
+
+Puzzlogic Game is built using modern open-source technologies.
+
+Special thanks to:
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Framer Motion
+* Lucide Icons
+* TanStack Query
+* Vitest
+* Testing Library
+* Node.js
+* Express
+* Prisma
+* Web Audio API
+* GitHub
+* Render
+
+---
+
+## ⭐ Support the Project
+
+If you find **Puzzlogic Game** useful or interesting:
+
+* ⭐ Star the repository
+* 🐛 Report bugs
+* 💡 Suggest improvements
+* 🔧 Contribute code
+* 📢 Share the project
+
+---
+
+<p align="center">
+
+### 🧩 Challenge your mind. One puzzle at a time.
+
+**Puzzlogic Game**
+
+<br>
+
+<a href="https://puzzlogic-game-ja4v.onrender.com/modes">
+🚀 Play Now
+</a>
+&nbsp;&nbsp;•&nbsp;&nbsp;
+<a href="https://github.com/Ganeshbasani/Puzzlogic--Game">
+📦 GitHub
+</a>
+
+</p>
+```
+
