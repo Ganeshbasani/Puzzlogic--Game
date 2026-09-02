@@ -1,377 +1,134 @@
-# Puzzlogic Game
+<!-- PROJECT-SHOWCASE -->
 
-Puzzlogic Game is a monorepo for a puzzle-focused web application designed around short, satisfying daily brain-training sessions.
+<p align="center">
+  <h1 align="center">🧩 Puzzlogic Game</h1>
+  <p align="center">
+    <strong>A polished daily puzzle platform built for quick, rewarding brain-training sessions.</strong>
+  </p>
+  <p align="center">
+    <a href="https://puzzlogic-game-ja4v.onrender.com/modes">🚀 Live Demo</a>
+    &nbsp;•&nbsp;
+    <a href="https://github.com/Ganeshbasani/Puzzlogic--Game">📦 GitHub Repository</a>
+  </p>
+</p>
 
-The current live product inside this repository is the migrated frontend app in [`frontend/`](./frontend). That frontend is a polished, mobile-first puzzle experience currently branded and implemented as **PuzzDaily**. The rest of the repository is structured to support the next phase of the product, including backend APIs, shared game logic, centralized assets, and technical documentation.
+---
 
-## What This App Is
+## 🚀 Live Demo
 
-Puzzlogic Game is built for players who want quick puzzle sessions that still feel rewarding and structured.
+**Play Puzzlogic Game online:**
 
-The app combines:
+👉 **https://puzzlogic-game-ja4v.onrender.com/modes**
 
-- a daily puzzle loop
-- replayable practice sessions
-- timed challenge runs
-- an archive of puzzle content
-- persistent stats and streak tracking
-- a visually polished mobile-first UI
+The deployed application provides a mobile-first puzzle experience with Daily, Practice, Challenge, and Archive modes.
 
-At the moment, the app is frontend-driven and stores player progress locally in the browser. The backend, shared, and documentation layers are scaffolded and ready for expansion.
+---
 
-## Current Status
+## 📸 Application Screenshots
 
-- `frontend/` is the active, working application
-- `backend/`, `shared/`, `assets/`, `docs/`, and `scripts/` are prepared for future development
-- the frontend currently persists settings, daily completion, and stats in `localStorage`
-- authentication and server-side leaderboards are planned but not implemented yet
+### 🏠 Home Dashboard
 
-## Core Player Experience
+The home screen gives players an overview of today's puzzle, streak, progress, and available game modes.
 
-The app is centered on a simple but sticky gameplay loop:
+<p align="center">
+  <img src="./docs/screenshots/home-dashboard.png" alt="Puzzlogic Game Home Dashboard" width="380">
+</p>
 
-1. Open the home screen and see today's puzzle, your streak, and quick performance stats
-2. Start a daily session, enter practice mode, try a challenge run, or browse the archive
-3. Solve puzzle cards one by one with interactive feedback, hints, timers, and animations
-4. Finish the session and review results including time, attempts, hints, score, and social-style ranking feedback
-5. Track long-term performance through stats, streaks, and weekly activity
+### 🎮 Game Modes
 
-## How The App Works
+Players can choose between Daily, Practice, Challenge, and Archive modes.
 
-### Home Screen
+<p align="center">
+  <img src="./docs/screenshots/game-modes.png" alt="Puzzlogic Game Modes" width="380">
+</p>
 
-The home screen is the main entry point and acts as the player's dashboard.
+### 🧩 Number Grid Gameplay
 
-It shows:
+An interactive logic puzzle where players complete the missing values in a number grid.
 
-- the current daily puzzle number
-- the type and difficulty of today's featured puzzle
-- current streak information
-- quick lifetime stats such as solved count and win rate
-- a countdown to the next daily reset after completion
-- a simulated active-player indicator for social energy
+<p align="center">
+  <img src="./docs/screenshots/gameplay-grid.png" alt="Number Grid Gameplay" width="380">
+</p>
 
-The goal of the screen is to make it obvious what the player should do next and to reinforce the daily habit loop.
+### 🎯 Pinpoint Gameplay
 
-### Mode Selection
+A word-association puzzle where players identify the connection between progressively revealed clues.
 
-From the home screen, players can move into dedicated gameplay modes:
+<p align="center">
+  <img src="./docs/screenshots/gameplay-pinpoint.png" alt="Pinpoint Gameplay" width="380">
+</p>
 
-- **Daily**: a fixed 15-puzzle session generated for the current day
-- **Practice**: a 10-puzzle run filtered by puzzle type and difficulty
-- **Challenge**: a 10-puzzle run intended to feel more score-driven and intense
-- **Archive**: a browse-and-replay catalog of puzzle content
+### 📖 Interactive Puzzle Tutorial
 
-### Session Flow
+First-time players receive an interactive tutorial explaining how each puzzle type works.
 
-All gameplay sessions are coordinated through the frontend session layer.
+<p align="center">
+  <img src="./docs/screenshots/how-to-play.png" alt="Puzzle Tutorial" width="380">
+</p>
 
-When a session starts, the app:
+### ⚙️ Settings
 
-- determines which mode the player selected
-- builds the correct puzzle set for that mode
-- resets session-level counters such as score, attempts, hints, skips, and elapsed time
-- loads the correct puzzle renderer based on the puzzle type
-- optionally shows a first-time tutorial overlay for that puzzle type
+Players can customize sound effects, reset tutorials, manage streak-related features, and reset progress.
 
-As the player progresses:
+<p align="center">
+  <img src="./docs/screenshots/settings.png" alt="Puzzlogic Game Settings" width="380">
+</p>
 
-- each solved or skipped puzzle is recorded
-- session score and counters are updated
-- the next puzzle loads automatically when applicable
-- daily completion is marked if the player is in daily mode
-- the final results screen summarizes the full run
+### 📊 Statistics
 
-### Results Flow
+The statistics screen tracks the player's puzzle progress, performance, and weekly activity.
 
-After a session or puzzle completion, the results page gives the player a satisfying summary.
+<p align="center">
+  <img src="./docs/screenshots/statistics.png" alt="Puzzlogic Game Statistics" width="380">
+</p>
 
-It includes:
+---
 
-- total time
-- attempts
-- hints used
-- skipped count
-- final score for session-based modes
-- an accuracy ring
-- streak information
-- percentile-style performance feedback
-- a shareable result card format
+## ✨ Key Features
 
-### Stats and Settings
+- 🧠 Multiple puzzle types including Queens, Pinpoint, Logic Riddle, and Number Grid
+- 📅 Daily puzzle sessions with streak tracking
+- 🎯 Practice mode for focused skill development
+- ⏱️ Challenge mode with timed gameplay
+- 🗂️ Archive mode for replaying puzzle content
+- 📊 Statistics and performance tracking
+- 💡 Puzzle-specific hints and tutorials
+- 🔊 Browser-based sound effects
+- 📱 Mobile-first responsive interface
+- 🎉 Animated feedback and completion effects
+- 💾 Local browser persistence for player progress
+- ⚡ Fast Vite-powered frontend
+- 🧩 Feature-oriented React architecture
 
-The app also includes supporting screens for retention and customization.
+---
 
-**Stats** tracks:
+## 🎮 Game Modes
 
-- total played and solved
-- win rate
-- best time
-- first-attempt accuracy
-- daily streak and best streak
-- difficulty-based performance
-- weekly activity
+| Mode | Description |
+|------|-------------|
+| **Daily** | Solve the daily puzzle set and maintain your streak |
+| **Practice** | Practice puzzles by type and difficulty |
+| **Challenge** | Complete a timed, score-oriented puzzle run |
+| **Archive** | Browse and replay the puzzle catalog |
 
-**Settings** currently supports:
+---
 
-- sound on or off
-- tutorial reset
-- progress reset
-- streak-freeze display state
+## 🧩 Puzzle Types
 
-## Game Modes In Detail
+| Puzzle | Description |
+|--------|-------------|
+| **Queens** | Place queens while satisfying row, column, region, and adjacency rules |
+| **Pinpoint** | Identify the hidden connection between clue words |
+| **Logic Riddle** | Solve short text-based riddles and logic problems |
+| **Number Grid** | Complete missing numbers using logical patterns |
 
-### Daily Mode
+---
 
-Daily mode is the main habit-forming loop of the app.
-
-It provides:
-
-- a fixed 15-puzzle session each day
-- streak tracking across days
-- daily completion state
-- countdown behavior after completion
-- daily result persistence
-
-The current implementation builds the daily session from a deterministic rotating sequence so every day feels structured and repeatable.
-
-### Practice Mode
-
-Practice mode is meant for focused improvement.
-
-Players can choose:
-
-- puzzle type
-- difficulty
-
-The app then generates a 10-puzzle run filtered by those selections, making this mode useful for skill-building and repetition.
-
-### Challenge Mode
-
-Challenge mode is a faster, score-oriented run.
-
-It uses:
-
-- a curated puzzle pool
-- session scoring
-- timed progression
-- attempts-based reward behavior
-
-This mode is designed to feel more performance-driven than daily or practice.
-
-### Archive Mode
-
-Archive mode gives the player access to the puzzle catalog.
-
-It allows players to:
-
-- browse previously available content
-- replay archived puzzles
-- jump directly into a selected puzzle from the catalog
-
-## Puzzle Types
-
-The current playable app supports four live puzzle categories:
-
-### Queens
-
-Queens is a spatial logic puzzle where the player must place one queen per row, column, and color region, while also ensuring queens do not touch each other, including diagonally adjacent cells.
-
-The interaction model supports:
-
-- tap-to-mark
-- tap-to-place
-- conflict feedback
-- reset and clear controls
-- optional auto-check behavior
-
-### Pinpoint
-
-Pinpoint is a word-association puzzle.
-
-Players are shown clue words progressively and must identify the hidden connection from multiple-choice answers.
-
-It emphasizes:
-
-- layered clue reveal
-- low-attempt solving
-- recognition and word association
-
-### Logic Riddle
-
-Logic Riddle presents short text riddles and logic prompts where the player types in the answer.
-
-It focuses on:
-
-- careful reading
-- lateral thinking
-- typed input
-- optional hint support
-
-### Number Grid
-
-Number Grid is a compact numeric reasoning puzzle where the player fills missing grid values to satisfy a pattern or rule.
-
-It focuses on:
-
-- pattern recognition
-- short-form deduction
-- direct answer verification
-
-### Future Puzzle Expansion
-
-The puzzle engine and component structure are designed to grow.
-
-The codebase already includes scaffolding for additional puzzle categories, including a word puzzle model and renderer, even though the current live experience primarily centers on the four active puzzle types above.
-
-## Feature Breakdown
-
-### Player-Facing Features
-
-- mobile-first interface
-- animated transitions and polished visual feedback
-- daily streak loop
-- local stats and result history
-- puzzle-specific tutorials
-- in-browser sound effects
-- device vibration feedback when supported
-- shareable results summary
-- archive browsing
-
-### Progress Features
-
-- local persistence for stats
-- daily completion tracking
-- tutorial completion tracking
-- sound preference persistence
-- streak calculations
-- weekly activity summary
-
-### UX Features
-
-- lazy-loaded route screens
-- suspense-based loading states
-- reusable glass-card style system
-- bottom navigation for primary screens
-- error boundary fallback screen
-- confetti and celebratory completion feedback
-
-## How Puzzle Generation Works
-
-The puzzle engine is the core content layer of the app.
-
-It currently defines:
-
-- puzzle types
-- puzzle difficulty levels
-- puzzle pools
-- daily session length
-- practice session length
-- challenge session length
-- archive sorting
-
-Generation strategy by mode:
-
-- **Daily** uses a deterministic sequence rotated by the current day index
-- **Practice** filters the overall puzzle pool by type and difficulty
-- **Challenge** uses a curated pool ordered by difficulty mix
-- **Archive** returns the full catalog sorted for browsing
-
-This makes the content layer predictable, easy to reason about, and easy to extend with new puzzles later.
-
-## Data and Persistence
-
-The current frontend uses browser storage rather than a live backend.
-
-The app persists:
-
-- user settings
-- tutorial visibility state
-- daily completion data
-- per-session result records
-- aggregated statistics derived from recorded results
-
-This means the app works as a lightweight standalone experience today, while the repository structure leaves room for later migration to a server-backed system.
-
-## Sound, Feedback, and Onboarding
-
-The player experience is reinforced with lightweight sensory feedback.
-
-### Sound
-
-The app generates sound effects in the browser using the Web Audio API rather than relying on bundled media files.
-
-Current feedback includes:
-
-- tap
-- mark
-- queen placement
-- conflict
-- correct answer
-- wrong answer
-- win/celebration
-- general selection feedback
-
-### Vibration
-
-When supported by the device, short vibration patterns are triggered for interactions and success/error states.
-
-### Tutorials
-
-Each puzzle type has a first-time tutorial overlay that explains:
-
-- how the puzzle works
-- how to interact with it
-- what success looks like
-
-Tutorial completion is remembered so returning players are not blocked by repeated onboarding.
-
-## Repository Structure
-
-```text
-puzzlogic-game/
-  frontend/    Active Vite + React + TypeScript puzzle client
-  backend/     Planned Node.js + Express + Prisma backend
-  shared/      Cross-layer types, constants, rules, and algorithms
-  assets/      Centralized images, audio, levels, and animation assets
-  docs/        Architecture, product, API, and deployment docs
-  scripts/     Automation and project maintenance scripts
-```
-
-## Frontend Architecture
-
-The frontend is a feature-oriented React application.
-
-```text
-frontend/
-  public/      Static public assets
-  src/
-    assets/     App artwork and image assets
-    components/ Shared UI building blocks
-    constants/  Routes, labels, and app configuration
-    features/   Play, puzzles, progress, and settings
-    hooks/      Shared custom hooks
-    pages/      Route-level screens
-    services/   Helpers such as sound and scoring
-    styles/     Global and component-level styles
-    test/       Vitest regression tests
-    utils/      Small utility helpers
-```
-
-Important frontend modules:
-
-- `frontend/src/main.tsx` bootstraps the client
-- `frontend/src/App.tsx` sets up providers, routing, lazy loading, and the app shell
-- `frontend/src/features/puzzles/model/puzzleEngine.ts` defines the puzzle data model and session generation rules
-- `frontend/src/features/play/hooks/usePlaySession.ts` drives gameplay sessions and transitions
-- `frontend/src/features/progress/model/` manages results, stats, and daily completion data
-- `frontend/src/features/settings/model/` manages persisted app settings and tutorial state
-
-## Tech Stack
+## 🛠️ Technology Stack
 
 ### Frontend
 
-- React 18
+- React
 - TypeScript
 - Vite
 - Tailwind CSS
@@ -379,100 +136,34 @@ Important frontend modules:
 - TanStack Query
 - Vitest
 
-### Planned Backend
+### Backend
 
 - Node.js
 - Express
-- Prisma
 - TypeScript
+- Prisma
 
-## Getting Started
+### Development & Deployment
 
-### Prerequisites
-
-- Node.js 18+ recommended
+- Git
+- GitHub
+- Render
 - npm
 
-### Run the Frontend
+---
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+## 📱 Design Philosophy
 
-### Build the Frontend
+Puzzlogic Game is designed around a simple principle:
 
-```bash
-cd frontend
-npm run build
-```
+> **Make short puzzle sessions feel rewarding enough to become a daily habit.**
 
-### Test the Frontend
+The interface uses a clean mobile-first layout, focused gameplay cards, clear feedback, lightweight animations, and a simple navigation system so players can move from opening the app to solving a puzzle with minimal friction.
 
-```bash
-cd frontend
-npm test
-```
+---
 
-## Frontend Scripts
+<!-- END PROJECT-SHOWCASE -->
 
-Available in `frontend/package.json`:
+Set-Content "README.md" $readme -Encoding UTF8
 
-- `npm run dev`
-- `npm run build`
-- `npm run build:dev`
-- `npm run lint`
-- `npm run preview`
-- `npm test`
-- `npm run test:watch`
-
-## Backend Plan
-
-The backend scaffold is intended to support the next stage of the product.
-
-Planned responsibilities include:
-
-- user authentication
-- server-side leaderboards
-- persistent player accounts
-- game-state APIs
-- shared puzzle and session APIs
-- long-term progress storage
-
-Current backend structure includes:
-
-- `backend/src/controllers/`
-- `backend/src/routes/`
-- `backend/src/services/`
-- `backend/src/middleware/`
-- `backend/src/validators/`
-- `backend/src/utils/`
-- `backend/src/config/`
-- `backend/src/types/`
-- `backend/prisma/`
-
-## Shared Layer Plan
-
-The `shared/` directory is reserved for reusable cross-layer logic such as:
-
-- shared types
-- constants
-- puzzle rules
-- validation-friendly domain models
-- algorithms that should be consistent between frontend and backend
-
-## Documentation
-
-Planned docs live in:
-
-- `docs/architecture.md`
-- `docs/game-design.md`
-- `docs/api-docs.md`
-- `docs/deployment.md`
-
-## Notes
-
-- There is no root-level workspace or package manager orchestration yet, so commands should currently be run from `frontend/`
-- the migrated frontend still uses the existing package name `puzzdaily`
-- the backend and supporting monorepo layers are placeholders today and should be implemented as the platform evolves
+Write-Host "README updated successfully!" -ForegroundColor Green
