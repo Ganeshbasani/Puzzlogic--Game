@@ -1,192 +1,119 @@
-\documentclass[10pt,a4paper]{article}
+# 🧩 Puzzlogic Game
 
-% --- PACKAGES & SETUP ---
-\usepackage[utf8]{inputenc}
-\usepackage[margin=0.75in]{geometry}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-\usepackage{microtype}
-\usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{titlesec}
-\usepackage{listings}
-\usepackage{enumitem}
+<p align="center">
+  <img src="https://img.shields.io/badge/🧩%20Puzzlogic-Game-4F46E5?style=for-the-badge" alt="Puzzlogic Game">
+  <br><br>
+  <a href="https://puzzlogic-game-ja4v.onrender.com/modes">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Application-Puzzlogic%20Game-4F46E5?style=for-the-badge" alt="Live Application">
+  </a>
+  <a href="https://github.com/Ganeshbasani/Puzzlogic--Game">
+    <img src="https://img.shields.io/badge/📦%20GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub Repository">
+  </a>
+</p>
 
-% --- COLOR PALETTE ---
-\definecolor{primary}{HTML}{4F46E5}   % Indigo
-\definecolor{darkbg}{HTML}{1E293B}    % Dark Slate
-\definecolor{lightbg}{HTML}{F8FAFC}   % Off White
-\definecolor{border}{HTML}{E2E8F0}    % Light Gray Border
-\definecolor{accent}{HTML}{0EA5E9}    % Sky Blue
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/React_18-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white" alt="Framer Motion">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="Prisma">
+</p>
 
-% --- HYPERLINK STYLES ---
-\hypersetup{
-    colorlinks=true,
-    linkcolor=primary,
-    filecolor=primary,      
-    urlcolor=primary,
-    pdftitle={Puzzlogic Game - Technical Documentation},
-}
+<p align="center">
+  <strong>A polished, mobile-first daily puzzle platform engineered for short, high-satisfaction brain-training sessions.</strong>
+</p>
 
-% --- SECTION FORMATTING ---
-\titleformat{\section}
-  {\color{primary}\Large\bfseries\raggedright}
-  {}{0em}{}
-  [\color{border}\titlerule]
+---
 
-\titleformat{\subsection}
-  {\color{darkbg}\large\bfseries\raggedright}
-  {}{0em}{}
+## 📸 Application Showcase
 
-% --- LIST STYLES ---
-\setlist[itemize]{noitemsep, topsep=3pt, leftmargin=1.5em}
+| 🏠 Home Dashboard | 🎮 Game Modes | 🔢 Number Grid |
+| :---: | :---: | :---: |
+| <img src="./docs/screenshots/home-dashboard.png" width="260" alt="Home Dashboard"> | <img src="./docs/screenshots/game-modes.png" width="260" alt="Game Modes"> | <img src="./docs/screenshots/gameplay-grid.png" width="260" alt="Number Grid"> |
 
-% --- LISTINGS (CODE BLOCKS) ---
-\lstdefinestyle{techstyle}{
-    backgroundcolor=\color{lightbg},
-    commentstyle=\color{gray},
-    keywordstyle=\color{primary}\bfseries,
-    numberstyle=\tiny\color{gray},
-    stringstyle=\color{accent},
-    basicstyle=\ttfamily\small\color{darkbg},
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2,
-    frame=single,
-    rulecolor=\color{border}
-}
-\lstset{style=techstyle}
+| 🎯 Pinpoint Gameplay | ⚙️ App Settings | 📊 Statistics |
+| :---: | :---: | :---: |
+| <img src="./docs/screenshots/gameplay-pinpoint.png" width="260" alt="Pinpoint Gameplay"> | <img src="./docs/screenshots/settings.png" width="260" alt="Settings"> | <img src="./docs/screenshots/statistics.png" width="260" alt="Statistics"> |
 
-% --- DOCUMENT CONTENT ---
-\begin{document}
+---
 
-% --- HEADER BLOCK ---
-\begin{center}
-    {\Huge \bfseries \color{primary} 🧩 Puzzlogic Game} \\[0.4em]
-    {\large \textbf{Production-Grade Mobile-First Daily Logic Puzzle Platform}} \\[0.8em]
-    \href{https://puzzlogic-game-ja4v.onrender.com/modes}{\textbf{[🚀 Live Application]}} 
-    \quad $\bullet$ \quad 
-    \href{https://github.com/Ganeshbasani/Puzzlogic--Game}{\textbf{[📦 GitHub Repository]}}
-\end{center}
+## 🚀 Quick Links & Live Application
 
-\vspace{0.5em}
+- 🌐 **Live Application:** [https://puzzlogic-game-ja4v.onrender.com/modes](https://puzzlogic-game-ja4v.onrender.com/modes)
+- 📦 **GitHub Repository:** [https://github.com/Ganeshbasani/Puzzlogic--Game](https://github.com/Ganeshbasani/Puzzlogic--Game)
 
-% --- METADATA TABLE ---
-\noindent
-\begin{tabularx}{\textwidth}{@{} X X X X @{}}
-\toprule
-\textbf{Frontend Core} & \textbf{State \& UI} & \textbf{Backend / DB} & \textbf{Deployment} \\
-\midrule
-React 18, TypeScript, Vite & Tailwind CSS, Framer Motion & Node.js, Express, Prisma & Render, GitHub Actions \\
-\bottomrule
-\end{tabularx}
+---
 
-\vspace{1em}
+## 💡 System Overview & Core Philosophy
 
-% --- OVERVIEW ---
-\section{📖 Architecture Overview}
-\textbf{Puzzlogic Game} is a mobile-first, daily logic puzzle platform engineered around short, high-satisfaction sessions. It leverages deterministic daily puzzle generation, offline-first local browser persistence, native Web Audio API synthesis, and real-time progress analytics.
+> **Design Philosophy:** *Make short daily puzzle sessions feel rewarding enough to build a lasting habit.*
 
-The repository is structured as a full-stack monorepo featuring an active production frontend in \texttt{frontend/} (\textbf{PuzzDaily}) along with scaffolded backend, shared library, and documentation layers prepared for cloud state synchronization and global leaderboards.
+**Puzzlogic Game** is a mobile-first daily puzzle platform engineered around quick, highly engaging logic challenges. 
 
-% --- KEY FEATURES ---
-\section{✨ Key Features}
-\begin{itemize}
-    \item \textbf{Multi-Category Engine:} Integrated puzzle execution for spatial logic (\textit{Queens}), word association (\textit{Pinpoint}), lateral deductions (\textit{Logic Riddle}), and matrix patterns (\textit{Number Grid}).
-    \item \textbf{Deterministic Daily Loop:} Algorithmic daily session generator featuring streak retention and automated countdown resets.
-    \item \textbf{Specialized Game Modes:} Complete support for \textbf{Daily}, \textbf{Practice} (filtered by type/difficulty), \textbf{Challenge} (timed score runs), and \textbf{Archive} (catalog replay).
-    \item \textbf{Programmatic Audio Synthesis:} Dynamic sound feedback synthesized on-the-fly via the Web Audio API—eliminating bulky audio asset files.
-    \item \textbf{Offline-First Persistence:} Complete local storage retention for settings, active state, streaks, and analytics without mandatory login barriers.
-\end{itemize}
+The production client inside `frontend/` (branded as **PuzzDaily**) delivers dynamic puzzle generators, animated step feedback, programmatic audio synthesis, local-first progress storage, and interactive tutorials. The system is architected as a full-stack monorepo featuring scaffolded backend and shared modules prepared for server-side user synchronization and global leaderboards.
 
-% --- GAME MODES BREAKDOWN ---
-\section{🎮 Game Modes Specifications}
-\begin{center}
-\begin{tabularx}{\textwidth}{@{} l X l X @{}}
-\toprule
-\textbf{Mode} & \textbf{Description} & \textbf{Length} & \textbf{Primary Mechanics} \\
-\midrule
-\textbf{Daily} & Fixed daily puzzle set & 15 Puzzles & Rotates via deterministic day-index; drives streak retention \\
-\textbf{Practice} & Focused skill improvement & 10 Puzzles & Filterable by category and difficulty level \\
-\textbf{Challenge} & Score-oriented speed run & 10 Puzzles & Timed progression with attempt-based score multipliers \\
-\textbf{Archive} & Historical puzzle catalog & On-Demand & Full historical catalog access for previous daily sets \\
-\bottomrule
-\end{tabularx}
-\end{center}
+---
 
-% --- SYSTEM ARCHITECTURE ---
-\section{🏗️ System Architecture}
-\begin{lstlisting}[language=bash, caption={System Component & Data Flow Topology}]
-                             +-----------------------+
-                             |   Puzzlogic Client    |
-                             |    (Vite / React)     |
-                             +-----------+-----------+
-                                         |
-   +-------------------------------------+-------------------------------------+
-   |                                     |                                     |
-+--v------------+                 +------v--------+                     +------v--------+
-|  Game Engine  |                 | Sound Service |                     | Progress Store|
-| (Session Gen) |                 |  (Web Audio)  |                     | (localStorage)|
-+--+------------+                 +---------------+                     +------+--------+
-   |                                                                           |
-   |              +-------------------------------------+                      |
-   +------------->| Render Engine (Framer Motion / UI)  |<---------------------+
-                  +-------------------------------------+
-\end{lstlisting}
+## ✨ Key Technical & UX Features
 
-% --- MONOREPO STRUCTURE ---
-\section{📂 Repository Directory Hierarchy}
-\begin{lstlisting}[caption={Monorepo Project Layout}]
-puzzlogic-game/
-├── frontend/               # Active Vite + React + TypeScript client app
-│   ├── src/
-│   │   ├── components/     # Reusable glassmorphic UI components
-│   │   ├── features/       # Game modules (play, puzzles, progress, settings)
-│   │   ├── services/       # Web Audio synthesizer & scoring algorithms
-│   │   └── utils/          # Data converters & helper functions
-│   └── test/               # Vitest suite & regression tests
-├── backend/                # Scaffolded Node.js + Express API server (Prisma)
-├── shared/                 # Reserved for cross-layer types, rules, & algorithms
-├── assets/                 # Centralized media, raw art, and global assets
-└── docs/                   # System architecture & deployment manuals
-\end{lstlisting}
+- 🧠 **Multi-Category Logic Engine:** Supports spatial grid placement (**Queens**), word association (**Pinpoint**), typed lateral thinking (**Logic Riddle**), and matrix deduction (**Number Grid**).
+- 📅 **Deterministic Daily Session Loop:** Algorithmic daily session generation featuring daily resets, active streak tracking, and built-in **Streak Freeze** protection.
+- 🎮 **4 Specialized Game Modes:** Dedicated modes for **Daily**, **Practice** (custom filterable runs), **Challenge** (timed score runs), and **Archive** (historical catalog replay).
+- 🔊 **Web Audio Synthesizer:** On-the-fly sound effect generation synthesized entirely using browser APIs—eliminating external audio assets.
+- 💾 **Offline-First Storage:** Zero-barrier gameplay that persists all progress, statistics, settings, and streak counts in local browser storage.
+- 📱 **Mobile-First UX:** Glassmorphic card design, fluid micro-interactions via Framer Motion, lazy-loaded page routing, and celebration feedback (confetti & vibration).
 
-% --- LOCAL DEVELOPMENT ---
-\section{💻 Getting Started \& Execution}
-\subsection{Prerequisites}
-\begin{itemize}
-    \item \textbf{Node.js}: \texttt{v18.0.0} or higher
-    \item \textbf{npm}: \texttt{v9.0.0} or higher
-\end{itemize}
+---
 
-\subsection{Setup Commands}
-\begin{lstlisting}[language=bash, caption={Local Setup Steps}]
-# 1. Clone the repository
-git clone https://github.com/Ganeshbasani/Puzzlogic--Game.git
-cd Puzzlogic--Game
+## 🎮 Game Modes Breakdown
 
-# 2. Navigate to frontend and install dependencies
-cd frontend
-npm install
+| Game Mode | Session Length | Description & Primary Mechanics |
+| :--- | :--- | :--- |
+| 📅 **Daily** | 15 Puzzles | Deterministically rotated daily set focused on habit retention and daily streak tracking. |
+| 🏋️ **Practice** | 10 Puzzles | Skill-building run filtered by user-selected puzzle type and difficulty level. |
+| ⏱️ **Challenge** | 10 Puzzles | High-intensity timed run with score-driven mechanics and penalty modifiers. |
+| 📚 **Archive** | On-Demand | Full historical catalog access allowing players to browse and replay past daily puzzle sets. |
 
-# 3. Launch dev server
-npm run dev
+---
 
-# 4. Execute test suite
-npm test
-\end{lstlisting}
+## 🧩 Playable Puzzle Categories
 
-% --- FOOTER ---
-\vspace{1.5em}
-\centerline{\small \color{gray} Engineered by \textbf{Ganesh Basani} $\bullet$ Licensed under the \textbf{MIT License}}
+| Category | Type & Focus | Gameplay Mechanics |
+| :--- | :--- | :--- |
+| 👑 **Queens** | Spatial Logic | Place non-touching queens (including diagonals) across rows, columns, and color zones. Includes tap-to-mark and collision checking. |
+| 🎯 **Pinpoint** | Word Association | Progressively revealed clues requiring deduction of a hidden central connection. Rewards quick recognition. |
+| 🧩 **Logic Riddle** | Lateral Thinking | Concise text riddles and logic prompts requiring typed input with optional hint overlays. |
+| 🔢 **Number Grid** | Quantitative Reasoning | Complete missing values within a matrix grid by identifying hidden numerical patterns. |
 
-\end{document}
+---
+
+## 🏗️ System Architecture
+
+```text
+                         ┌─────────────────────────┐
+                         │     Puzzlogic Client    │
+                         │      React + Vite       │
+                         └────────────┬────────────┘
+                                      │
+              ┌───────────────────────┼───────────────────────┐
+              │                       │                       │
+              ▼                       ▼                       ▼
+       ┌──────────────┐       ┌──────────────┐       ┌──────────────┐
+       │ Puzzle Engine│       │ Sound Service│       │ Progress Store│
+       │ (Session Gen)│       │ Web Audio API│       │ localStorage │
+       └──────┬───────┘       └──────────────┘       ───────┬───────┘
+              │                                              │
+              └──────────────────┬───────────────────────────┘
+                                 ▼
+                        ┌────────────────────┐
+                        │   React UI Layer   │
+                        │ Tailwind + Motion  │
+                        └──────────┬─────────┘
+                                   │
+                                   ▼
+                        ┌────────────────────┐
+                        │   Backend Layer    │
+                        │ Node.js + Prisma   │
+                        └────────────────────┘
